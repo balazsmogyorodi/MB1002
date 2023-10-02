@@ -46,7 +46,7 @@ public class Main {
     }
 
     private static int melyik() {
-     //   Scanner src = new Scanner(System.in);
+   //     Scanner src = new Scanner(System.in);
         int melyik;
         System.out.print("Kérek egy számot (1-3) között");
         do {
@@ -60,7 +60,7 @@ public class Main {
         String[] ujPakli = new String[22];
         switch (oszlop) {
             case 1:
-                for (int i = 1; i < 7; i++) {
+                for (int i = 1; i <= 7; i++) {
                     ujPakli[i] = pakli[20 - ((i - 1) * 3)];
                     ujPakli[i + 7] = pakli[19 - ((i - 1) * 3)];
                     ujPakli[i + 14] = pakli[21 - ((i - 1) * 3)];
