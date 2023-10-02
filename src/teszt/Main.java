@@ -50,7 +50,7 @@ public class Main {
         int melyik;
         System.out.print("Kérek egy számot (1-3) között");
         do {
-            melyik = 1;
+            melyik = 2;
         } while (melyik < 0 || melyik > 3);
         System.out.println("");
         return melyik;
