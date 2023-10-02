@@ -13,7 +13,7 @@ public class Main {
         kirak();
         for (int i = 0; i < 3; i++) {
             int oszlop = melyik();
-            kever();
+            kever(oszlop);
             kirak();
         }
         ezVolt();
@@ -47,14 +47,31 @@ public class Main {
 
     private static int melyik() {
         int melyik;
-        System.err.print("Kérek egy számot (1-3) között");
+        System.out.print("Kérek egy számot (1-3) között");
         do {
             melyik = 2;
         } while (melyik < 0 && melyik > 3);
+        System.out.println("");
         return melyik;
     }
 
-    private static void kever() {
+    private static void kever(int oszlop) {
+        String[] ujPakli = new String[22];
+        switch (oszlop) {
+            case 1:
+                for (int i = 1; i < 7; i++) {
+                    ujPakli[i] = pakli[20 - (i - 1) * 3];
+                    ujPakli[i + 7] = pakli[19 - (i - 1) * 3];
+                    ujPakli[i + 14] = pakli[21 - (i - 1) * 3];
+                }
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+
+        }
+        pakli = ujPakli;
 
     }
 
