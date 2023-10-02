@@ -1,11 +1,11 @@
 package teszt;
 
-import static java.time.Clock.system;
+
 
 public class Main {
 
     static String[] pakli = new String[22];
-    static Scanner src = new Scanner();
+ 
 
     public static void main(String[] args) {
 
@@ -46,10 +46,11 @@ public class Main {
     }
 
     private static int melyik() {
+     //   Scanner src = new Scanner(System.in);
         int melyik;
         System.out.print("Kérek egy számot (1-3) között");
         do {
-            melyik = 2;
+            melyik = 1;
         } while (melyik < 0 && melyik > 3);
         System.out.println("");
         return melyik;
@@ -60,9 +61,9 @@ public class Main {
         switch (oszlop) {
             case 1:
                 for (int i = 1; i < 7; i++) {
-                    ujPakli[i] = pakli[20 - (i - 1) * 3];
-                    ujPakli[i + 7] = pakli[19 - (i - 1) * 3];
-                    ujPakli[i + 14] = pakli[21 - (i - 1) * 3];
+                    ujPakli[i] = pakli[20 - ((i - 1) * 3)];
+                    ujPakli[i + 7] = pakli[19 - ((i - 1) * 3)];
+                    ujPakli[i + 14] = pakli[21 - ((i - 1) * 3)];
                 }
                 break;
             case 2:
